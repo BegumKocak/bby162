@@ -4,16 +4,15 @@ class sozler:
     def __init__(self, master):
         self.master = master
         master.title("Günün sözleri")
+        master.configure(background="green")
 
         self.baslık = Label(master, text="Günün Sözü" , font="times 20 bold" , bg="yellow" )
         self.baslık.pack()
 
         self.tıkla = Button(master, text="Tıkla",command=self.sozyazdır  , font="times 13" , bg="grey")
-        self.tıkla.pack()
         self.tıkla.pack(side=LEFT)
 
         self.kapat = Button(master, text="Kapat", command=master.quit, font="times 13" , bg="grey" )
-        self.kapat.pack()
         self.kapat.pack(side=RIGHT)
 
     def sozyazdır(self):
@@ -25,4 +24,3 @@ class sozler:
 root = Tk()
 secilensoz = sozler(root)
 root.mainloop()
-
